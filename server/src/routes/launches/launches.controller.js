@@ -8,11 +8,11 @@ function httpAddNewLaunch(req, res) {
   const launch = req.body;
   if (
     !launch.mission ||
-    !launch.destination ||
+    !launch.target ||
     !launch.rocket ||
     !launch.launchDate
   ) {
-    return res.status(400).json({
+    return res.status(401).json({
       error: "Missing required launch property",
     });
   }
