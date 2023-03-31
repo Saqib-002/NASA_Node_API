@@ -17,7 +17,7 @@ function httpAddNewLaunch(req, res) {
     !launch.rocket ||
     !launch.launchDate
   ) {
-    return res.status(401).json({
+    return res.status(400).json({
       error: "Missing required launch property",
     });
   }
