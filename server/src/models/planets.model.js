@@ -12,8 +12,6 @@ function isHabitablePlanet(planet) {
   );
 }
 
-const habitablePlanets = [];
-
 function loadPlanetsData() {
   return new Promise((resolve, reject) => {
     fs.createReadStream(
